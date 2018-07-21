@@ -40,12 +40,14 @@ import com.github.model.User;
 import com.github.service.UserService;
 import com.github.service.UserServiceFeign;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
 
 @RestController
+@RequestMapping("user")
 public class UserController implements UserServiceFeign {
 
 	@Resource private UserService userService;

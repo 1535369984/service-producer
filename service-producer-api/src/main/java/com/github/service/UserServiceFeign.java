@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  *  service-producer
  */
-@RequestMapping("user")
 public interface UserServiceFeign {
 
 	@RequestMapping("hello")
