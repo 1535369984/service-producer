@@ -47,7 +47,6 @@ import javax.annotation.Resource;
 
 
 @RestController
-@RequestMapping("user")
 public class UserController implements UserServiceFeign {
 
 	@Resource private UserService userService;
@@ -57,6 +56,7 @@ public class UserController implements UserServiceFeign {
 		return userService.hello();
 	}
 
+	@Override
 	public User getUser(@PathVariable Integer id) {
 		return userService.getUser(id);
 	}
